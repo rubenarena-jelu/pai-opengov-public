@@ -1,150 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PAI_opengov · JELU Consulting</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PAI_opengov · Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="app.js"></script>
 </head>
 <body>
-  <div class="page">
 
-    <!-- HERO / HEADER CARD -->
-    <section class="hero-card">
-      <div class="brand-row">
-        <div class="brand-left">
-          <div class="brand-logo">
-            <div>
-              <div>JELU</div>
-              <div style="font-size:0.7rem; font-weight:400; line-height:1.1;">CONSULTING</div>
-            </div>
-          </div>
-          <div class="brand-text">
-            <div class="brand-title">PAI_opengov</div>
-            <div class="brand-sub">Parliamentary AI Intelligence Platform</div>
-          </div>
-        </div>
-
-        <div class="tagline-box">
-          <strong>Real-time power mapping.</strong><br/>
-          Track MPs, coalitions, and lawmaking dynamics in Italy’s Parliament.
-          Built by JELU Consulting.
-        </div>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand-block">
+      <div class="brand-logo-box">
+        <img src="logo-jelu-dark.png" alt="JELU"/>
       </div>
-
-      <div class="hero-main">
-        <div>
-          <div class="hero-title">
-            We turn raw parliamentary activity into strategic intelligence.
-          </div>
-          <div class="hero-desc">
-            PAI_opengov analyzes votes, speeches, alliances, and legislative patterns
-            in the Italian Parliament. We surface who actually moves policy,
-            how coalitions behave under pressure, and where influence is consolidating.
-          </div>
-
-          <div class="hero-cta-row">
-            <a class="btn-primary" href="#features">See capabilities</a>
-            <a class="btn-secondary" href="#contact">Request private access</a>
-          </div>
-        </div>
+      <div class="brand-names">
+        <div class="brand-title">PAI_opengov</div>
+        <div class="brand-sub">by JELU Consulting</div>
       </div>
-    </section>
-
-    <!-- FEATURE GRID -->
-    <section class="section-block" id="features">
-      <div class="section-title">Core Capabilities</div>
-
-      <div class="feature-grid">
-
-        <div class="feature-card">
-          <div class="feature-head">
-            <div class="feature-icon">MP</div>
-            <div>
-              <div class="feature-title">MP Profiles</div>
-              <div class="feature-desc">
-                Behavior profiles for each deputy and senator:
-                voting discipline, issue focus, and deviation from party line.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-head">
-            <div class="feature-icon">VOTE</div>
-            <div>
-              <div class="feature-title">Voting Blocks</div>
-              <div class="feature-desc">
-                We cluster voting patterns to expose unofficial alliances.
-                See who quietly cooperates across parties when it matters.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-head">
-            <div class="feature-icon">LAW</div>
-            <div>
-              <div class="feature-title">Bill Trajectory</div>
-              <div class="feature-desc">
-                Follow the real life-cycle of a proposal: sponsor,
-                committees, amendments, resistance points, timing risk.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-head">
-            <div class="feature-icon">RISK</div>
-            <div>
-              <div class="feature-title">Instability / Shock Signals</div>
-              <div class="feature-desc">
-                Detect breakpoints: leadership struggles, loyalty fractures,
-                and accelerated agenda pushes. Built for strategy & national interest.
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT / ACCESS -->
-    <section class="section-block" id="contact">
-      <div class="section-title">Private Access</div>
-
-      <div class="feature-card" style="max-width:600px; margin:0 auto;">
-        <div class="feature-head">
-          <div class="feature-icon">JELU</div>
-          <div>
-            <div class="feature-title">Request Intelligence Access</div>
-            <div class="feature-desc">
-              PAI_opengov is deployed privately for strategic, analytical,
-              and institutional use. To request access, please contact JELU Consulting.
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-cta-row" style="margin-top:1rem;">
-          <a class="btn-primary" href="mailto:info@jelu-consulting.example">
-            Get in touch
-          </a>
-          <a class="btn-secondary" href="#">
-            Whitepaper (coming soon)
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <div class="footer-note">
-      PAI_opengov · JELU Consulting<br/>
-      Parliamentary AI Intelligence Platform · Italy<br/>
-      © 2025
     </div>
 
-  </div>
+    <div class="nav-block">
+      <div class="nav-label">Core</div>
+      <a class="nav-link active" href="index.html">Dashboard</a>
+      <a class="nav-link" href="mp.html">MP Profiles</a>
+      <a class="nav-link" href="votes.html">Voting Blocks</a>
+    </div>
+
+    <div class="nav-block">
+      <div class="nav-label">Signals</div>
+      <a class="nav-link" href="mp.html#risk">Instability / Shock</a>
+      <a class="nav-link" href="votes.html#coalitions">Coalition Drift</a>
+    </div>
+
+    <div class="sidebar-footer">
+      Parliamentary AI Intelligence<br/>
+      Strategic analysis · Italy<br/><br/>
+      Private access only.
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-area">
+
+    <!-- top bar -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="page-title">
+          <div>Parliament Overview</div>
+          <div class="chip">Live model</div>
+        </div>
+        <div class="page-desc">
+          Aggregated behavior signals across the Chamber and Senate. We track
+          bloc cohesion, loyalty fractures, rapid agenda pushes, and emerging
+          pressure points.
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <strong>Realtime Power Mapping</strong><br/>
+        Who is holding leverage right now, and
+        who is losing control.<br/>
+        Updated ~hourly.
+      </div>
+    </div>
+
+    <!-- cards grid -->
+    <section class="card-grid">
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">COH</div>
+          <div>
+            <div class="card-title">Bloc Cohesion</div>
+            <div class="card-desc">
+              How tightly each coalition is voting internally.
+              Drops indicate fractures / side deals.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <div class="stat-label">Majority bloc</div>
+            <div id="stat-majority-cohesion">92%</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Opposition bloc</div>
+            <div id="stat-opposition-cohesion">77%</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Volatility</div>
+            <div id="stat-volatility">Low</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">RISK</div>
+          <div>
+            <div class="card-title">Instability Signals</div>
+            <div class="card-desc">
+              Internal revolt probability within leadership circles.
+              Used to anticipate cabinet stress.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <div class="stat-label">Gov tension index</div>
+            <div id="stat-tension-index">3.1 / 10</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Whip defiance (24h)</div>
+            <div id="stat-whip-defiance">2 MPs</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Urgent votes flagged</div>
+            <div id="stat-urgent-votes">1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">LAW</div>
+          <div>
+            <div class="card-title">High-Sensitivity Bills</div>
+            <div class="card-desc">
+              Measures with economic / security impact,
+              currently moving faster than standard timetable.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <div class="stat-label">Fast-tracked</div>
+            <div id="stat-fasttracked">4</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Committee push</div>
+            <div id="stat-committee-push">Defense, Budget</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Risk window</div>
+            <div id="stat-risk-window">48h</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">ALLY</div>
+          <div>
+            <div class="card-title">Cross-Bloc Cooperation</div>
+            <div class="card-desc">
+              Opposition votes aligning with government agenda.
+              This is where unofficial deals live.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <div class="stat-label">Last 7 key votes</div>
+            <div id="stat-cross-support">3 with crossover</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Most helpful faction</div>
+            <div id="stat-helper-faction">Minor Opposition B</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Reliability</div>
+            <div id="stat-helper-reliability">82%</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="footer-hint">
+      PAI_opengov · Parliamentary AI Intelligence · JELU Consulting · Private circulation
+    </div>
+
+  </main>
+
 </body>
 </html>
