@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MP Profile · PAI_opengov</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand-block">
+      <div class="brand-logo-box">
+        <img src="logo-jelu-dark.png" alt="JELU"/>
+      </div>
+      <div class="brand-names">
+        <div class="brand-title">PAI_opengov</div>
+        <div class="brand-sub">by JELU Consulting</div>
+      </div>
+    </div>
+
+    <div class="nav-block">
+      <div class="nav-label">Core</div>
+      <a class="nav-link" href="index.html">Dashboard</a>
+      <a class="nav-link active" href="mp.html">MP Profiles</a>
+      <a class="nav-link" href="votes.html">Voting Blocks</a>
+    </div>
+
+    <div class="nav-block">
+      <div class="nav-label">Signals</div>
+      <a class="nav-link" href="#risk">Instability / Shock</a>
+      <a class="nav-link" href="votes.html#coalitions">Coalition Drift</a>
+    </div>
+
+    <div class="sidebar-footer">
+      Private intelligence asset. Do not distribute.
+    </div>
+  </aside>
+
+  <main class="main-area">
+
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="page-title">
+          <div>MP Profile: <span id="mp-name">On. Rossi Martina</span></div>
+          <div class="chip" id="mp-party">Majority Bloc</div>
+        </div>
+        <div class="page-desc">
+          Loyalty score, deviation risk, agenda focus and recent voting anomalies
+          for selected parliamentarian. Used to predict fracture or leverage.
+        </div>
+      </div>
+
+      <div class="topbar-right" id="risk">
+        <strong>Instability Risk</strong><br/>
+        <span id="mp-risk-score">Low (2.4 / 10)</span><br/>
+        Signal: unlikely to break line without external pressure.
+      </div>
+    </div>
+
+    <section class="card-grid">
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">LOY</div>
+          <div>
+            <div class="card-title">Party Loyalty</div>
+            <div class="card-desc">
+              How often this MP votes in alignment with party leadership guidance.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <div class="stat-label">Last 30 key votes</div>
+            <div id="mp-loyalty-30">93%</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Deviation trend</div>
+            <div id="mp-deviation-trend">Stable</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Whip warnings</div>
+            <div id="mp-whip-warnings">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">FOCUS</div>
+          <div>
+            <div class="card-title">Issue Focus</div>
+            <div class="card-desc">
+              Primary policy domains the MP pushes in speeches / amendments.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <div class="stat-label">Top themes</div>
+            <div id="mp-top-themes">Budget discipline, SMEs, Industry incentives</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Committee weight</div>
+            <div id="mp-committee">Budget & Planning</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Media footprint</div>
+            <div id="mp-media">Rising</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">ALERT</div>
+          <div>
+            <div class="card-title">Watchpoints</div>
+            <div class="card-desc">
+              Behavior that may indicate leverage-seeking, or silent dissent.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <div class="stat-label">Recent out-of-line votes</div>
+            <div id="mp-out-of-line">2 (economic policy)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Bloc sensitivity</div>
+            <div id="mp-sensitivity">Medium</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Risk window</div>
+            <div id="mp-risk-window">7 days</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="footer-hint">
+      MP-level behavioral analytics · JELU Consulting internal
+    </div>
+
+  </main>
+
+</body>
+</html>
