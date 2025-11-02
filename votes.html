@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Voting Blocks · PAI_opengov</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand-block">
+      <div class="brand-logo-box">
+        <img src="logo-jelu-dark.png" alt="JELU"/>
+      </div>
+      <div class="brand-names">
+        <div class="brand-title">PAI_opengov</div>
+        <div class="brand-sub">by JELU Consulting</div>
+      </div>
+    </div>
+
+    <div class="nav-block">
+      <div class="nav-label">Core</div>
+      <a class="nav-link" href="index.html">Dashboard</a>
+      <a class="nav-link" href="mp.html">MP Profiles</a>
+      <a class="nav-link active" href="votes.html">Voting Blocks</a>
+    </div>
+
+    <div class="nav-block">
+      <div class="nav-label">Signals</div>
+      <a class="nav-link" href="mp.html#risk">Instability / Shock</a>
+      <a class="nav-link active" href="#coalitions">Coalition Drift</a>
+    </div>
+
+    <div class="sidebar-footer">
+      Coalition behavior map · Internal use only.
+    </div>
+  </aside>
+
+  <main class="main-area">
+
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="page-title">
+          <div>Voting Blocks & Coalitions</div>
+          <div class="chip">Cross-Bloc Deals</div>
+        </div>
+        <div class="page-desc">
+          We analyze who supports whom in critical votes, even when
+          public messaging says otherwise.
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <strong>Cross-support Rate</strong><br/>
+        <span id="xb-support-rate">3 / 7 last key votes</span><br/>
+        Opposition voting with gov agenda.
+      </div>
+    </div>
+
+    <!-- TABLE -->
+    <section class="table-card" id="coalitions">
+      <div class="table-card-title">
+        Most Recent High-Sensitivity Votes
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Vote ID</th>
+            <th>Topic</th>
+            <th>Gov Position</th>
+            <th>Opposition Crossover</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="vote-table-body">
+          <tr>
+            <td>V-4821</td>
+            <td>Budget Amnd. 14B</td>
+            <td>Approve</td>
+            <td>Yes (Minor Opp B)</td>
+            <td>Likely negotiated on SME incentives</td>
+          </tr>
+          <tr>
+            <td>V-4819</td>
+            <td>Emergency Procurement</td>
+            <td>Approve</td>
+            <td>No</td>
+            <td>Opposition held line; high messaging cost</td>
+          </tr>
+          <tr>
+            <td>V-4813</td>
+            <td>Territorial Security Package</td>
+            <td>Approve</td>
+            <td>Yes (2 cross votes)</td>
+            <td>Security framing overrode party discipline</td>
+          </tr>
+          <tr>
+            <td>V-4805</td>
+            <td>Industrial Credit Shield</td>
+            <td>Approve</td>
+            <td>Partial</td>
+            <td>Regional loyalty factor detected</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card-grid">
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">ALLY</div>
+          <div>
+            <div class="card-title">Most Helpful Faction</div>
+            <div class="card-desc">
+              Opposition subgroup that most frequently backs gov priorities.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <div class="stat-label">Faction</div>
+            <div id="ally-faction">Minor Opposition B</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Reliability</div>
+            <div id="ally-reliability">82%</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Likely price</div>
+            <div id="ally-price">Regional development guarantees</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">RISK</div>
+          <div>
+            <div class="card-title">Fracture Risk (Majority)</div>
+            <div class="card-desc">
+              Internal dissent in the governing bloc on budget / industry / defense.
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-block">
+          <div class="stat-item">
+            <div class="stat-label">Current dissenters</div>
+            <div id="fracture-dissenters">2 MPs</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Profile</div>
+            <div id="fracture-profile">Industrial policy hardliners</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Rupture window</div>
+            <div id="fracture-window">48h</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="footer-hint">
+      Coalition influence mapping · PAI_opengov · JELU Consulting
+    </div>
+
+  </main>
+
+</body>
+</html>
